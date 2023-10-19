@@ -6,6 +6,7 @@ const {
   touristDestinationsRouter,
 } = require("./routes/touristDestinations.routes");
 const { userRouter } = require("./routes/users.routes");
+const bookingRouter = require("./routes/bookings.routes");
 const app = express();
 
 //port
@@ -22,6 +23,8 @@ app.get("/", (req, res) => {
 //touristDestinationsRouter
 app.use("/touristDestinations", touristDestinationsRouter);
 app.use("/users", userRouter);
+app.use("/bookings", bookingRouter);
+
 app.listen(port, async () => {
   try {
     await mongoDbConnection;
