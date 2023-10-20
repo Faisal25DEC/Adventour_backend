@@ -23,7 +23,7 @@ userRouter.get("/", authenticate, async (req, res) => {
 });
 
 userRouter.post("/signup", checkUser, (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, googleSignIn } = req.body;
   bcrypt.hash(password, 10, async function (err, hash) {
     if (err) {
       res.status(400).send("bad request");
