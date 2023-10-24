@@ -11,7 +11,7 @@ const app = express();
 
 require("dotenv").config();
 //port
-const port = 8080;
+const port = 8000;
 
 //middlewares
 app.use(express.json());
