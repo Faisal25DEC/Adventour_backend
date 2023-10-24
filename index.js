@@ -9,6 +9,7 @@ const { userRouter } = require("./routes/users.routes");
 const bookingRouter = require("./routes/bookings.routes");
 const app = express();
 
+require("dotenv").config();
 //port
 const port = 8080;
 

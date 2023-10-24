@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const uri =
-  "mongodb+srv://faizaljohnson25dec:faisal@cluster0.utjpulc.mongodb.net/adventour-backend";
+const uri = process.env.MONGO_URI;
 
 const mongoDbConnection = mongoose.connect(uri);
 
